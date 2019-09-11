@@ -9,11 +9,11 @@
 \usepackage{marvosym}
 \usepackage{graphicx}
 
-\name{Irfan Sharif}
-\address{\href{https://irfansharif.io/}{irfansharif.io} \\
-         \href{mailto:irfan@irfansharif.io}{irfan@irfansharif.io}\ \\
-         \href{https://www.linkedin.com/in/irfansharifm}{in/irfansharifm} \\
-         \href{https://github.com/irfansharif}{github.com/irfansharif}}
+\name{Palash Nigam}
+\address{\href{https://palash25.github.io/}{palash25.github.io} \\
+         \href{mailto:npalash25@gmail.com}{npalash25@gmail.com}\ \\
+         \href{https://www.linkedin.com/in/palash25}{in/palash25} \\
+         \href{https://github.com/palash25}{github.com/palash25}}
 
 \begin{document}
 
@@ -24,23 +24,10 @@
 \begin{rSection}{Summary}
   \begin{rSummarySection}
   {
-    \item Experience with distributed systems, ML, storage and search engines,
-      file systems, SAT solvers
-    \item Go, C\texttt{++}, C, Java, Python, Rust, Haskell, Ruby; NumPy, SciPy,
-      Pandas, TensorFlow, Keras
+    \item Experience with backend web services and open source development. Interested in distributed systems, dev tools and systems programming.
+    \item Go, Python, Rust, Ruby, C; ElasticSearch, MongoDB, git
   }
   \end{rSummarySection}
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Education}
-  \begin{rEducationSection}{University of Waterloo}
-                           {Sept '14 -- Apr '19}
-                           {Bachelor of Applied Science in Honours Computer Engineering (with Distinction)}
-  \end{rEducationSection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -48,96 +35,49 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
-  \begin{rEmptyWorkSection}{Cockroach Labs}
-                           {Toronto, ON}
-                           {Member of Technical Staff (Core)}
-                           {July '19 -- Present}
-  \end{rEmptyWorkSection}
-
-  \begin{rWorkSection}{LinkedIn}
-                      {Sunnyvale, CA}
-                      {Software Engineering Intern (Machine Learning Infrastructure)}
-                      {Sept -- Dec '18}
+  \begin{rWorkSection}{Cloud Native Computing Foundation}
+                      {Remote}
+                      {Community Bridge Intern}
+                      {Jul -- Aug '19}
   {
-    \item Worked cross-team on model serving, versioning, runtime environments and
-      deployment systems
-    \item Published designs on model state
-      machines/deployment orchestration across thousands of hosts
-    \item Introduced dynamic request buffering mechanism to mitigate bursty,
-      high-throughput traffic load
+    \item Wrote a plugin to serve DNS records from Google Cloud DNS to coredns.
   }
   \end{rWorkSection}
 
-  \begin{rWorkSection}{Amazon}
-                     {Palo Alto, CA}
-                     {Software Engineering Intern (Search Relevance)}
+  \begin{rWorkSection}{Atlan}
+                     {New Delhi, India}
+                     {Software Development Intern (Backend)}
                      {Jan -- Apr '18}
   {
-    \item Led multiple design reviews for proposals outlining measures to
-      improve barcode search relevance
-    \item Authored query reformulation modules to improve system recall and
-      click-through rate by 2.49\%
-    \item Leveraged sequence-to-sequence learning to generate alternative
-      search suggestions for users
-    \item Incorporated OCR text around barcodes into ranking models to reduce
-      defects/variance in results
+    \item Rewrote \href{https://collect.atlan.com/}{Collect}'s Analytics API (originally in Python) in Go and deployed it on GCP.
+    \item Ported parts of the Collect monolith from NodeJS to Go.
+    \item Proof of Concept on improving Collect's ElasticSearch cluster topology.
   }
   \end{rWorkSection}
 
-  \begin{rDualWorkSection}{Cockroach Labs}
-                     {New York, NY}
-                     {Backend Engineering Intern (Storage/Performance)}
-                     {May -- Sept '17}
-  {
-    \item Designed a dedicated persistent state
-      \href{https://github.com/cockroachdb/cockroach/pull/16361}{\underline
-      {storage engine}} for Raft, increased throughput by 14.6\%
-    \item Implemented flow-control mechanisms for writes, significantly
-      reducing 99-th percentile latencies
-    \item Patched
-      \href{https://github.com/coreos/etcd/pull/8288}{\underline{etcd/raft}}'s
-      PreVote extension from the thesis paper, formally
-      \href{https://github.com/irfansharif/raft.tla/commit/22b05818b6bcfe6719a708f2270a1308fecbc0fa}{\underline
-      {verifying}} using TLA\texttt{+}
-    \item Forked
-      \href{https://github.com/irfansharif/grpc-go}{\underline{grpc/grpc-go}},
-      increased throughput by 12.8\% batching syscalls/reducing GC pressure
-  }
-  {Backend Engineering Intern (Distributed SQL)}
-  {Aug -- Dec '16}
-  {
-     \item Constructed core components of new distributed query
-       \href{https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160421_distributed_sql.md}
-       {\underline{execution engine}}, including distributed aggregations, sort
-       algorithms, row-deduplications, and performant $n$-way
-       \href{https://www.cockroachlabs.com/blog/better-sql-joins-in-cockroachdb/}
-       {\underline{parallel SQL joins}}
-  }
-  \end{rDualWorkSection}
-
-  \begin{rWorkSection}{Shopify}
-                     {Ottawa, ON}
-                     {Production Engineering Intern (Infrastructure)}
+  \begin{rWorkSection}{Appbase}
+                     {Remote}
+                     {Software Engineering Intern (Infrastructure)}
                      {Jan -- Apr '16}
   {
-    \item Built an auto-scaling build system with dynamic workload distribution
-      handling 1,000\texttt{+} builds/day
+    \item Wrote an adaptor to sync data between Redis and Elasticsearch for a data ingestion pipeline named \href{http://github.com/appbaseio/abc/}{abc} in Go.
+    \item Implemented cluster management and analytics support for \href{http://github.com/appbaseio/abc/}{abc}.
+    \item Wrote unit and integration tests for an \href{https://github.com/appbaseio/arc}{Elasticsearch API Gateway}
+  }
+  \end{rWorkSection}
+  
+  \begin{rWorkSection}{coala.io}
+                     {Remote}
+                     {Google Summer of Code Student}
+                     {Jan -- Apr '16}
+  {
+    \item Improved coala's I/O mechanism by implementing FileFactory. An abstraction layer to interface with files and enable lazy loading.
+    \item Integrated FileFactory with coala's old core by implementing a middleware thereby ensuring backwards compatibility and enabling furhter enhancement of the Nextgen Core.
+    \item Wrote a Persistent Hash module for generating unique hashes for coala's task objects to improve the cache accuracy.
   }
   \end{rWorkSection}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-% RESEARCH SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Research}
-  \begin{rResearchSection}{Computer Aided Reasoning Lab}
-                     {(SAT/SMT solvers)}
-                     {Oct -- Dec '16}
-   \item Researched search space pruning, clustering and
-     parallelization strategies with Prof. Vijay Ganesh
-  \end{rResearchSection}
-\end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
@@ -145,22 +85,44 @@
 
 \begin{rSection}{Projects}
   \begin{rProjectSection}
-    \item \textbf {Kura} -- An E2EE, synchronized, distributed
-      \href{https://github.com/kurafs/kura}{\underline{file system}} with
-      live-sharing and file streaming
-    \item \textbf {CFilter} -- Cuckoo Filter implementation with 730\texttt{+}
-      stars and 35\texttt{+} forks on
-      \href{https://github.com/irfansharif/cfilter}{\underline {GitHub}}
+    \item \textbf {Unirest-go} -- Kong's Unirest protocol \href{https://github.com/kurafs/kura}{\underline{implemented in Go}}.
+    \item \textbf {GapBuffers} -- \href{https://github.com/palash25/GapBuffer}{\underline{C99 implementation}} of GapBuffer
+    \item \textbf {wc-rs} -- \href{https://github.com/palash25/wc-rs}{\underline{Rust port}} of the wc unix command
+    \item \textbf {foaas-cli} -- \href{https://github.com/palash25/foaas-cli}{\underline{CLI tool}} for FOaaS API with 100\texttt{+} stars on Github.
   \end{rProjectSection}
 
   \begin{rBlurbSection}
     \item {\em Open-source contributions:}
-      \href{https://github.com/coreos/etcd/pull/8288}{\textbf{coreos/etcd}},
-      \href{https://github.com/grpc/grpc-go/pull/1478}{\textbf{grpc/grpc-go}},
-      \href{https://github.com/uber/go-torch/pull/62}{\textbf{uber/go-torch}},
-      \href{https://rubygems.org/gems/cerebrum}{\textbf{cerebrum}},
-      \href{https://rubygems.org/gems/mqueue}{\textbf{mqueue}}
+      \href{http://bit.ly/2LfMLIW}{\textbf{google/go-github}},
+      \href{http://bit.ly/2Quw26G}{\textbf{coala}},
+      \href{http://bit.ly/2NLmHsD}{\textbf{ethereum}},
+      \href{https://github.com/coredns/coredns/pull/3011}{\textbf{coredns}} and
+      \href{http://bit.ly/2lJ4PCy}{\textbf{various others}}
   \end{rBlurbSection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Volunteer Experience}
+  \begin{tabular}{rll}
+2018	     & {\href{http://bit.ly/2OsNuqI}{Github Campus Expert}}  & Introducing OSS development in my campus.\\
+2018	     & Google Code In Mentor  & Mentored High School students in OSS development.\\
+2018	     & Head ProgrammingSociety  & Led the college programming club.\\
+\end{tabular}
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+  \begin{rEducationSection}{International Institute of Information Technology, Bhubaneswar}
+                           {Aug '16 -- Present}
+                           {Bachelors of Technology in Computer Science and Engineering}
+  \end{rEducationSection}
 \end{rSection}
 
 \end{document}
