@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Generate pdf
+      run: make
+    - name: Clean auto-generated file
+      run: make clean
